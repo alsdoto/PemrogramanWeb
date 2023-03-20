@@ -1,7 +1,12 @@
 <?php
-$nilai1 = 0;
 
-if ($nilai1 <= 39) {
+$namalengkap = "Alma Sulaiman";
+$jeniskelamin = "Pria";
+$umur = "Masih muda";
+$menikah = "Baru satu kali";
+$nilai1 = 100;
+
+if ($nilai1 <= 35 && $nilai1 >= 85) {
     $huruf = "E";
     $status = "Gagal";
 } else if ($nilai1 >= 40 && $nilai1 <= 49) {
@@ -27,11 +32,9 @@ if ($nilai1 <= 39) {
     $status = "Istimewa";
 }
 else{
-    echo "Nilai tidak terdefinisi";
+    $huruf = "Nilai tidak terdefinisi";
+    $status = '';
 }
-
-echo "Nilai", "Huruf", "Status";
-echo "$nilai", "$huruf", "$status";
 ?>
 
 <br>
@@ -42,49 +45,77 @@ echo "$nilai", "$huruf", "$status";
     <body>
         <table border="1" padding="1">
             <tr>
-                <td>Nilai</td>
-                <td>Huruf</td>
-                <td>Status</td>
+                <td>Nama</td>
+                <td>:</td>
+                <td>
+                    <?php echo $namalengkap; ?>
+                </td>
             </tr>
             <tr>
-                <td><?php ?> 85-100</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
+                <td>
+                    Jenis Kelamin
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <?php echo $jeniskelamin; ?>
+                </td>
             </tr>
             <tr>
-                <td><?php ?> 80-84</td>
-                <td><?php ?> </td>
-                <td><?php ?> </td>
+                <td>
+                    Umur
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <?php echo $umur; ?>
+                </td>
             </tr>
             <tr>
-                <td><?php ?> 75-79</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
+                <td>
+                    Status Pernikahan
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <?php echo $menikah ?>
+                </td>
             </tr>
             <tr>
-                <td><?php ?> 70-74</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
+                <td>
+                    Nilai
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <?php echo $nilai1; ?>
+                </td>
             </tr>
             <tr>
-                <td><?php ?> 60-69</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
+                <td>
+                    Huruf
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <?php echo $huruf; ?>
+                </td>
             </tr>
             <tr>
-                <td><?php ?> 50-59</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
-            </tr>
-            <tr>
-                <td><?php ?> 40-49</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
-            </tr>
-            <tr>
-                <td><?php ?> 0-39</td>
-                <td><?php ?></td>
-                <td><?php ?></td>
+                <td>
+                    Keterangan
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <?= $status;?>
+                </td>
             </tr>
         </table>
     </body>
